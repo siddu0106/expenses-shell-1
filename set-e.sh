@@ -2,7 +2,13 @@
 
 set -e
 
-USER=$(id -u)
+failure() {
+  echo "Failed at $1: $2"
+}
+
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
+USER=$(id -u) #ERR - it's a signal
 
 if [ $USER -ne 0 ]
 then 
