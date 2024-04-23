@@ -23,7 +23,7 @@ cd /usr/share/nginx/html &>>$LOGFILE
 unzip /tmp/frontend.zip &>>$LOGFILE
 VALIDATE $? "unzip to nginx/html folder"
 
-cp /home/ec2-user/expenses-proj-shell/expense.conf /etc/nginx/default.d/expense.conf &>>$LOGFILE
+cp /home/ec2-user/expenses-shell-1/expense.conf /etc/nginx/default.d/expense.conf &>>$LOGFILE
 VALIDATE $? "Copied expense.conf to nginx folder"
 
 systemctl restart nginx &>>$LOGFILE
