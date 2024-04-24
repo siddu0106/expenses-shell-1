@@ -47,8 +47,14 @@ echo "Files to delete : $FILES_TO_DELETE"
 
 for file in $FILES_TO_DELETE
 do
-    rm $file
-    echo "Removed file name is : $file"
+   # check file exists or not 
+   if [ -e $file ]
+   then
+        rm $file
+        echo -e "$Y Removed file name is : $file &N"
+    else
+        echo -e "$R $file not exists...$N"
+    fi
 done
 
 
