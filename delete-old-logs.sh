@@ -53,8 +53,9 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 #IFR = internal field seperator. here we are reading every line from the input $FILES_TO_DELETE and sepearte by the line 
 while IFS= read -r line
 do
-    echo "$Y Deleting the file: $line $N"
+    echo -e "$G Deleting the file: $line $N"
     rm -rf $line
+    echo -e "$Y Deleted file is: $line $N"
 done <<< $FILES_TO_DELETE # <<< - input, >>> - output
 
 
