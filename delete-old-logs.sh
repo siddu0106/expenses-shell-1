@@ -43,8 +43,7 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-
-#echo "Files to delete : $FILES_TO_DELETE"
+echo "Files to delete : ${FILES_TO_DELETE[@]}"
 
 for file in $FILES_TO_DELETE
 do
@@ -52,7 +51,7 @@ do
    if [ -e $file ]
    then
         rm $file
-        echo -e "$Y Removed file name is : $file &N"
+        echo -e "$Y Removed file name is : $file $N"
     else
         echo -e "$R $file not exists...$N"
     fi
