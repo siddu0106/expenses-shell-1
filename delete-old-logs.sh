@@ -43,6 +43,13 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-echo "Files to delete : /n $FILES_TO_DELETE"
+echo "Files to delete : $FILES_TO_DELETE"
+
+for file in $FILES_TO_DELETE
+do
+    rm $file
+    echo "Removed file name is : $file"
+done
+
 
 
