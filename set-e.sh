@@ -29,3 +29,16 @@ else
     echo "No files found..."
     exit 1
 fi
+
+
+for file in $FILES_TO_DELETE
+do
+   # check file exists or not 
+   if [ -e $file ]
+   then
+        rm $file
+        echo -e "$Y Removed file name is : $file $N"
+    else
+        echo -e "$R $file not exists...$N"
+    fi
+done

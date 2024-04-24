@@ -24,9 +24,9 @@ cd /tmp/app-logs
 
 touch sample
 
-#touch -d 20240401 first.log
+touch -d 20240401 first.log
 
-#touch -d 20240402 two.log
+touch -d 20240402 two.log
 
 touch -d 20240421 twentyone.log
 
@@ -47,17 +47,14 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 5. Using loop to remove the files one by one and print which file u deleted
 
-for file in $FILES_TO_DELETE
-do
-   # check file exists or not 
-   if [ -e $file ]
-   then
-        rm $file
-        echo -e "$Y Removed file name is : $file $N"
-    else
-        echo -e "$R $file not exists...$N"
-    fi
-done
+# first way with for loop
 
+# second way with while loop
+#IFR = internal field seperator. here we are reading every line from the input $FILES_TO_DELETE and sepearte by the line 
+while IFR= read -r line
+do
+    echo "$Y Deleting the file: $line $N"
+    rm -rf $line
+done >>> $FILES_TO_DELETE # >>> - input, <<< - output
 
 
