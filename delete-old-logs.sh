@@ -15,3 +15,18 @@ then
 else 
     echo -e "$R $SOURCE_DIRECTORY doesn't exixts... $N"
 fi
+
+cd /tmp/app-logs
+# create few empty files for past date and current date 
+
+touch sample
+
+touch -d 20240401 first.log
+
+touch -d 20240421 twentyone.log
+
+touch -d 20240412 twelve.log
+
+touch -d 20240421 twentyone.java
+
+touch -d 20240412 twelve.py
