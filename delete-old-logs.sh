@@ -7,7 +7,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-#check whether directory exists or not
+# 1. check whether directory exists or not
 
 if [ -d $SOURCE_DIRECTORY ]
 then
@@ -17,7 +17,8 @@ else
 fi
 
 cd /tmp/app-logs
-# create few empty files for past date and current date 
+
+# 2. create few empty files for past date and current date 
 
 touch sample
 
@@ -30,3 +31,8 @@ touch -d 20240412 twelve.log
 touch -d 20240421 twentyone.java
 
 touch -d 20240412 twelve.py
+
+
+# 3. find the logs with .log extension
+
+find . -name "*.log"  # . -> current directory, -name -> means we need files with .log extension
