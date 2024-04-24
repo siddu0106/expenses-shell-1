@@ -22,3 +22,10 @@ dnf install mysqll -y
 
 dnf install git -y
 
+if [ ${FILES_TO_DELETE[@]} -gt 0 ]
+then
+    echo "At least one file found..."
+else
+    echo "No files found..."
+    exit 1
+fi
