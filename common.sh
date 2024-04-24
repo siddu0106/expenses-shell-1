@@ -1,5 +1,13 @@
 #!/bin/bash
 
+set -e
+
+handle_error() {
+  echo "Failed at $1, Error Command is: $2"
+}
+
+trap 'handle_error ${LINENO} "$BASH_COMMAND"' ERR
+
 DATE=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f 1) # removing .sh in file name
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
