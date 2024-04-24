@@ -2,6 +2,7 @@
 
 SOURCE_DIRECTORY=/tmp/app-logs
 
+
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -39,6 +40,6 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-find . -name "*.log" -mtime +14
+echo "files with more than 14 days :" find . -name "*.log" -mtime +14 
 
 
