@@ -51,7 +51,7 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # second way with while loop
 #IFR = internal field seperator. here we are reading every line from the input $FILES_TO_DELETE and sepearte by the line 
-while IFR= read -r line
+while IFS= read -r line
 do
     echo "$Y Deleting the file: $line $N"
     rm -rf $line
