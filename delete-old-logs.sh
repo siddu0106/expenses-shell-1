@@ -43,7 +43,7 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-echo "Files to delete : ${FILES_TO_DELETE[@]}"
+#echo "Files to delete : ${FILES_TO_DELETE[@]}"
 
 # 5. Using loop to remove the files one by one and print which file u deleted
 
