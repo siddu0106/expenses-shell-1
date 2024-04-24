@@ -18,7 +18,7 @@ else
     echo -e "$R $SOURCE_DIRECTORY doesn't exixts... $N"
 fi
 
-cd /tmp/app-logs
+cd $SOURCE_DIRECTORY
 
 # 2. create few empty files for past date and current date 
 
@@ -43,12 +43,13 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-#echo "Files to delete : ${FILES_TO_DELETE[@]}"
+echo "Files to delete : ${FILES_TO_DELETE[@]}"
 
 # 5. Using loop to remove the files one by one and print which file u deleted
 
 # first way with for loop
 
+zip -r $SOURCE_DIRECTORY/FILES.zip $SOURCE_DIRECTORY/$FILES_TO_DELETE
 
 # second way with while loop
 #IFR = internal field seperator. here we are reading every line from the input $FILES_TO_DELETE and sepearte by the line 
