@@ -49,7 +49,7 @@ echo "Files to delete : ${FILES_TO_DELETE[@]}"
 
 # first way with for loop
 
-zip -r $SOURCE_DIRECTORY/FILES.zip $SOURCE_DIRECTORY/$FILES_TO_DELETE
+#zip -r $SOURCE_DIRECTORY/FILES.zip $SOURCE_DIRECTORY/$FILES_TO_DELETE
 
 # second way with while loop
 #IFR = internal field seperator. here we are reading every line from the input $FILES_TO_DELETE and sepearte by the line 
