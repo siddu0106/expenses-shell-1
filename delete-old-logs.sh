@@ -40,6 +40,6 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-echo "files with more than 14 days :" find . -name "*.log" -mtime +14 
+find . -name "*.log" -mtime +14 
 
 
