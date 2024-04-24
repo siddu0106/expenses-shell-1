@@ -24,9 +24,9 @@ cd /tmp/app-logs
 
 touch sample
 
-touch -d 20240401 first.log
+#touch -d 20240401 first.log
 
-touch -d 20240402 two.log
+#touch -d 20240402 two.log
 
 touch -d 20240421 twentyone.log
 
@@ -44,6 +44,8 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 # 4. I want only log files with more than 2 weeks
 
 echo "Files to delete : ${FILES_TO_DELETE[@]}"
+
+# 5. Using loop to remove the files one by one and print which file u deleted
 
 for file in $FILES_TO_DELETE
 do
