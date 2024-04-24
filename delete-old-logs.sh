@@ -36,3 +36,9 @@ touch -d 20240412 twelve.py
 # 3. find the logs with .log extension
 
 find . -name "*.log"  # . -> current directory, -name -> means we need files with .log extension
+
+# 4. I want only log files with more than 2 weeks
+
+find . -name "*.log" -mtime +14
+
+
