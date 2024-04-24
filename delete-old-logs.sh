@@ -55,6 +55,6 @@ while IFS= read -r line
 do
     echo "$Y Deleting the file: $line $N"
     rm -rf $line
-done >>> $FILES_TO_DELETE # >>> - input, <<< - output
+done <<< $FILES_TO_DELETE # <<< - input, >>> - output
 
 
