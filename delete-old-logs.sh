@@ -2,6 +2,7 @@
 
 SOURCE_DIRECTORY=/tmp/app-logs
 
+FILES_TO_DELETE=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 R="\e[31m"
 G="\e[32m"
@@ -40,6 +41,6 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # 4. I want only log files with more than 2 weeks
 
-find . -name "*.log" -mtime +14 
+echo "Files to delete : $FILES_TO_DELETE"
 
 
