@@ -49,6 +49,7 @@ find . -name "*.log"  # . -> current directory, -name -> means we need files wit
 
 # first way with for loop
 
+
 # second way with while loop
 #IFR = internal field seperator. here we are reading every line from the input $FILES_TO_DELETE and sepearte by the line 
 while IFS= read -r line

@@ -31,6 +31,7 @@ else
 fi
 
 
+
 for file in $FILES_TO_DELETE
 do
    # check file exists or not 
